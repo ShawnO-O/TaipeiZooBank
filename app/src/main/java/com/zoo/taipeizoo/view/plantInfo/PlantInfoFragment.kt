@@ -1,5 +1,7 @@
 package com.zoo.taipeizoo.view.plantInfo
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -113,7 +115,7 @@ class PlantInfoFragment : BaseFragment(), PlantInfoInterface {
         ivPlantInfoAreaMemo.text = memo
         ivPlantInfoAreaCategory.text = category
         ivPlantInfoAreaWeb.setOnClickListener {
-
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(webUrl)))
         }
     }
 
